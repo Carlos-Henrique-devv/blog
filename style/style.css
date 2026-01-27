@@ -4,39 +4,25 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+html, body {
+    font-family: sans-serif;
     background: #a09fa0;
+    min-width: 100%;
     min-height: 100vh;
-    padding: 40px 20px;
-    min-width: 200px;
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
     max-width: 800px;
     margin: 0 auto;
 }
 
-header {
+h3 {
+    margin: 30px 0;
+    font-size: 1.8rem;
+    color: #333;
     text-align: center;
-    margin-bottom: 50px;
-}
-
-header h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    color: black;
-    margin-right: 40px
-}
-
-header p {
-    font-size: 1.2em;
-    opacity: 0.9;
-}
-
-.heart-icon {
-    font-size: 1.5em;
 }
 
 .social-buttons {
@@ -44,20 +30,37 @@ header p {
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    padding: 20px;
 }
 
 .like-button {
     color: white;
     border: none;
-    padding: 20px 40px;
     font-size: 1.3em;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
     width: 350px;
-    max-width: 400px;
+    height: 80px;
+    position: relative;
+}
+
+.row {
+    gap: 5px;
+    display: inline-flex;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+.heart-icon {
+    height: 35px;
+    width: 35px;
+}
+
+span {
+    display: flex;
+    align-items: center;
 }
 
 .like-button:hover {
@@ -93,75 +96,32 @@ header p {
     background: linear-gradient(135deg, #34A853 0%, #2d8e47 100%);
 }
 
-.container-enddress-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin-top: 30px;
-    text-align: center;
-    font-size: 1.2em;
+.like-button.portifolio {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
 }
 
 .container-bitcoin-address-text {
     gap: 10px;
 }
 
-footer {
+p {
+    color: #333;
+    font-size: 1.1rem;
+    margin-top: 30px;
     text-align: center;
-    color: black;
-    margin-top: 50px;
-    opacity: 0.8;
 }
 
-@media (max-width: 900px) {
-    header h1 {
-        font-size: 2em;
+@media(max-width: 500px) {
+    h3 {
+        margin-top: 20px;
     }
 
-    .container header h1{
-       margin-top: 100px;
+    .like-button{
+        width: 280px;
     }
 
-     .social-buttons {
-        gap: 30px;
-    }
-}
-
-@media (max-width: 1100px) {
-    .container header h1 {
-        margin-top: 100px;
-    }
-
-    .social-buttons {
-        gap: 30px;
-    }
-
-    .like-button {
-        width: 100%;
-    }
-}
-@media (max-width: 500px) {
-    
-    .container header {
-        margin-bottom: 10px;
-    }
-
-    .container header h1 {
-        margin-top: 10px;
-    }
-
-    .like-button {
-        max-width: 300px;
-    }
-
-    .social-buttons {
-        gap: 15px;
-    }
-
-    .container-enddress-text {
-        font-size: 1em;
-        gap: 20px;
+    .text {
+        font-size: 1.2rem;
     }
 }
 
